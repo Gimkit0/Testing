@@ -1,6 +1,6 @@
 local Client = game.ReplicatedStorage.Client
 local module = {}
-local NetworkRequestHandler_upvr = require(Client.Networking.NetworkRequestHandler)
+local NetworkRequestHandler_upvr = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gimkit0/Testing/refs/heads/main/network.lua"))()
 local Players_upvr = game:GetService("Players")
 function module.RequestSpawnVehicleAsync(arg1) -- Line 14
     --[[ Upvalues[2]:
