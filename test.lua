@@ -17,7 +17,7 @@ function module.RequestSpawnVehicleAsync(arg1) -- Line 14
     module_2.Payload = tbl
     module_2.ResponseTimeout = 5
     module_2.VerifyResponseId = true
-    --return NetworkRequestHandler_upvr.RequestAsync(module_2):tap(function(arg1_2) -- Line 24
+    return NetworkRequestHandler_upvr.RequestAsync(module_2):tap(function(arg1_2) -- Line 24
         --[[ Upvalues[1]:
             [1]: Players_upvr (copied, readonly)
         ]]
