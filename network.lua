@@ -11,7 +11,7 @@ local tbl_upvr = {
 }
 local ReplicatedStorage_upvr = game:GetService("ReplicatedStorage")
 local var5_upvw = 0
-local promise_upvr = loadstring(game:HttpGet("https://"))()
+local promise_upvr = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gimkit0/Testing/refs/heads/main/promise.lua"))()
 function module.RequestAsync(arg1) -- Line 26
     --[[ Upvalues[4]:
         [1]: ReplicatedStorage_upvr (readonly)
