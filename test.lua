@@ -25,26 +25,20 @@ function module.RequestSpawnVehicleAsync(arg1) -- Line 14
         end
     end)
 end
-local ReplicatedStorage_upvr = game:GetService("ReplicatedStorage")
-local VehicleConstants_upvr = require(game.ReplicatedStorage.Shared.Vehicle.VehicleConstants)
-local NotificationService_upvr = require(Client.UI.Services.NotificationService)
+
 function module.Start() -- Line 40
     --[[ Upvalues[3]:
         [1]: ReplicatedStorage_upvr (readonly)
         [2]: VehicleConstants_upvr (readonly)
         [3]: NotificationService_upvr (readonly)
     ]]
-    ReplicatedStorage_upvr.Events:FindFirstChild(VehicleConstants_upvr.RemoteName).OnClientEvent:Connect(function(arg1) -- Line 43
+    ReplicatedStorage_upvr.Events:FindFirstChild("VehicleRemote").OnClientEvent:Connect(function(arg1) -- Line 43
         --[[ Upvalues[2]:
             [1]: VehicleConstants_upvr (copied, readonly)
             [2]: NotificationService_upvr (copied, readonly)
         ]]
         if arg1.Type == VehicleConstants_upvr.MessageType.VehicleRemoved then
-            NotificationService_upvr.PushNotification({
-                NotificationType = "Alert";
-                Title = "Vehicle Towed";
-                Description = "Your vehicle was towed for being in a no parking zone";
-            })
+            
         end
     end)
 end
